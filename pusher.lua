@@ -15,7 +15,7 @@ local send = function(appid, authkey, authsecret, channelid, eventname, message)
 				'&'
 			)),
 		crypto.sha256).hexdigest()
-	return http.request { method='post', url=string.format('http://api.pusherapp.com%s?%s', url,
+	return http.request { method='post', url=string.format('http://api-us2.pusher.com%s?%s', url,
 		http.qsencode(parameters)), data=message }
 end
 
